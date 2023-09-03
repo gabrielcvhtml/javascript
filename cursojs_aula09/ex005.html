@@ -16,12 +16,32 @@
     <h1>Iniciando os Estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usa o <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <div class="msg">Clique em mim</div>
 
     <script>
         var p1 = document.getElementsByTagName('p')[0]
         window.document.write('Está escrito assim: ' + p1.innerText)
         p1.style.color = 'blue'
+        /*var d = document.getElementsByClassName('msg')[0]
+        d.style.background = 'green'
+        d.innerText = 'Olá mundo!'*/ // Seleção por class
+
+       /* var d = document.getElementById('msg')
+        d.style.color = 'black'
+        d.style.background = 'blueviolet'
+        d.innerText = ('Olá, Você é adotado')*/ // seleção por id
+
+       /* var d = document.getElementsByName('msg')[0]
+        d.style.background = 'yellow'
+        d.style.color = 'black'*/
+
+       /* document.getElementsByName('msg')[0].innerText = ('Bando de pilantra') -- outro modo de selecionar um objeto, porém muito grande*/
+
+       /*var d = document.querySelector('div#msg')
+       d.style.background = 'black'*/  // seleção usando o mais recente seletor, mas ele usa a sintaxe do css pra selecionar, ex o id que tive que por # para poder funcionar
+
+       var d = document.querySelector('div.msg')
+       d.style.color = 'red'  // seleção usando o mais recente seletor, mas ele usa a sintaxe do css pra selecionar, ex a clss que tive que por um ponto(.) para poder funcionar
     </script>
 </body>
 </html>
