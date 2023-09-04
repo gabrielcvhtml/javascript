@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos DOM</title>
+    <title>Eventos DOM - dentro do JS</title>
     <style>
         #msg{
             background-color: green;
@@ -20,12 +20,16 @@
     </style>
 </head>
 <body>
-    <div id="msg" onclick="clicar()" onmouseenter="entrar ()" onmouseout="sair ()">
+    <div id="msg">
         <p>Intereja...</p>
     </div>
 
-    <script>
-    var a = document.getElementById('msg') // por estar fora, e os blocos vazios, ele vai ser utilizados em todos os bloco  (escopo global)
+    <script> //EVENTO DENTRO DO JAVASCRIPT
+    var a = document.getElementById('msg') 
+    a.addEventListener('click',  clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
 
         function clicar (){
             a.innerText = 'vc clicou no meu botao'
@@ -42,5 +46,3 @@
             a.style.background = 'green'
             }    
     </script>
-</body>
-</html>
